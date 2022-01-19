@@ -1,7 +1,8 @@
-declare namespace _default {
+declare namespace yoastseo {
   // export { App };
   // export { Assessor };
-  // export { ContentAssessor };
+  export { ContentAssessor };
+  export { SeoAssessor };
   // export { TaxonomyAssessor };
   // export { Pluggable };
   // export { Researcher };
@@ -23,11 +24,11 @@ declare namespace _default {
   export { interpreters };
 }
 
-export default _default;
+export default yoastseo;
 
 // import App from "./src/app";
 // import Assessor from "./src/assessor";
-// import ContentAssessor from "./src/contentAssessor";
+import ContentAssessor from "./src/scoring/contentAssessor";
 // import SeoAssessor from "./src/seoAssessor";
 // import TaxonomyAssessor from "./src/taxonomyAssessor";
 // import Pluggable from "./src/pluggable";
@@ -49,6 +50,7 @@ import * as helpers from "./src/helpers";
 import * as markers from "./src/markers";
 import * as string from "./src/stringProcessing";
 import * as interpreters from "./src/interpreters";
+import { default as SeoAssessor } from "./src/scoring/seoAssessor";
 
 export {
   AnalysisWebWorker,
